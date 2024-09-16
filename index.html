@@ -5,90 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            background-color: #00bfa5;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .column {
-            padding: 15px;
-        }
-
-        .column.side {
-            flex: 30%;
-            background-color: #f4f4f4;
-        }
-
-        .column.middle {
-            flex: 70%;
-            background-color: #fff;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: #cccccc;
-            margin-bottom: 15px;
-        }
-
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background-color: #333;
-            color: white;
-            margin-top: 20px;
-        }
-
-        /* Responsywność */
-        @media screen and (max-width: 600px) {
-            .row {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #00bfa5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    padding: 15px;
+}
+
+.column.side {
+    flex: 30%;
+    background-color: #f4f4f4;
+}
+
+.column.middle {
+    flex: 70%;
+    background-color: #fff;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsywność */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
+    </style>
     <div class="header">
         <h1>My Website</h1>
         <p>With a flexible layout.</p>
@@ -102,13 +102,35 @@
     </div>
 
     <div class="row">
-        <div class="column side"></div>
-        <div class="column middle"></div>
+        <div class="column side">
+            <h2>About Me</h2>
+            <p>Photo of me:</p>
+            <div class="image-placeholder"></div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+        </div>
+
+        <div class="column middle">
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Dec 7, 2017</p>
+            <div class="image-placeholder"></div>
+            <p>Some text..</p>
+
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Sep 2, 2017</p>
+            <div class="image-placeholder"></div>
+            <p>Some text..</p>
+        </div>
     </div>
 
     <div class="footer">
         <h2>Footer</h2>
     </div>
+
 </body>
 </html>
-
