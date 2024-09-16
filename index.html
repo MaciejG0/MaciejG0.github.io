@@ -4,94 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
     <style>
         * {
-    box-sizing: border-box;
-}
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.header {
-    background-color: #00bfa5;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+        .header {
+            background-color: #bf9200;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-.header h1 {
-    margin: 0;
-}
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
 
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-}
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
 
-.column {
-    padding: 15px;
-}
+        .column {
+            padding: 15px;
+        }
 
-.column.side {
-    flex: 30%;
-    background-color: #f4f4f4;
-}
+        .column.side {
+            flex: 30%;
+            background-color: #f4f4f4;
+        }
 
-.column.middle {
-    flex: 70%;
-    background-color: #fff;
-}
+        .column.middle {
+            flex: 70%;
+            background-color: #fff;
+        }
 
-.image-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: #cccccc;
-    margin-bottom: 15px;
-}
+        .image-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #cccccc;
+            margin-bottom: 15px;
+        }
 
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
-}
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
 
-/* Responsywność */
-@media screen and (max-width: 600px) {
-    .row {
-        flex-direction: column;
-    }
-}
+        @media screen and (max-width: 900px) {
+            .column.side {
+                flex: 100%;
+                order: 2;
+            }
+            .column.middle {
+                flex: 100%;
+                order: 1;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                padding: 10px;
+            }
+
+            .column.side, .column.middle {
+                flex: 100%;
+            }
+
+            .image-placeholder {
+                height: 120px;
+            }
+        }
     </style>
+</head>
+<body>
+
     <div class="header">
-        <h1>My Website</h1>
-        <p>With a flexible layout.</p>
+        <h1>My Flexible Website</h1>
+
     </div>
 
     <div class="navbar">
@@ -106,10 +135,10 @@ body {
             <h2>About Me</h2>
             <p>Photo of me:</p>
             <div class="image-placeholder"></div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+            <p>Some text about me</p>
 
             <h3>More Text</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p></p>
             <div class="image-placeholder"></div>
             <div class="image-placeholder"></div>
             <div class="image-placeholder"></div>
@@ -117,12 +146,12 @@ body {
 
         <div class="column middle">
             <h2>TITLE HEADING</h2>
-            <p>Title description, Dec 7, 2017</p>
+            <p>Title description</p>
             <div class="image-placeholder"></div>
             <p>Some text..</p>
 
             <h2>TITLE HEADING</h2>
-            <p>Title description, Sep 2, 2017</p>
+            <p>Title description</p>
             <div class="image-placeholder"></div>
             <p>Some text..</p>
         </div>
