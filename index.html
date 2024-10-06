@@ -2,201 +2,115 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sklep Odzieżowy - Skarpetki Zygzaka McQueena</title>
+    <title>Helikopter</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #478dce;
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
         }
 
-        body {
-            font-family: Arial, sans-serif;
+        .pad {
+            position: absolute;
+            bottom: 0;
+            width: 200px;
+            height: 30px;
+            background-color: #1b1a1a;
         }
 
-        header {
-            background-color: #333;
-            padding: 15px 0;
+        .pad.left {
+            left: 40px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
+        .pad.right {
+            right: 40px;
         }
 
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ccc; /* Podświetlenie na szaro */
-        }
-
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-        }
-
-        .product {
-            width: 23%;
-            margin: 10px 0;
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .product img {
-            width: 100%;
+        .heli {
+            font-size: 80px;
+            position: absolute;
+            right: 40px;
+            bottom: 25px;
+            width: 80px;
             height: auto;
+            animation: move 2s infinite;
+            animation-timing-function: linear;
+            will-change: transform;
         }
 
-        .product h3 {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        .product p {
-            color: #555;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+        @keyframes move {
+            0% {
+                transform: translateX(0) translateY(0);
             }
-
-            .products {
-                flex-direction: column;
-                align-items: center;
+            5% {
+                transform: translateX(calc((100vw - 240px) * -0.05)) translateY(-35px);
             }
-
-            .product {
-                width: 80%;
+            10% {
+                transform: translateX(calc((100vw - 240px) * -0.1)) translateY(-70px);
             }
-        }
-
-        @media (max-width: 480px) {
-            nav ul li {
-                margin: 10px 0;
+            15% {
+                transform: translateX(calc((100vw - 240px) * -0.15)) translateY(-95px);
             }
-
-            .product {
-                width: 100%;
+            20% {
+                transform: translateX(calc((100vw - 240px) * -0.2)) translateY(-130px);
+            }
+            25% {
+                transform: translateX(calc((100vw - 240px) * -0.25)) translateY(-155px);
+            }
+            30% {
+                transform: translateX(calc((100vw - 240px) * -0.3)) translateY(-180px);
+            }
+            35% {
+                transform: translateX(calc((100vw - 240px) * -0.35)) translateY(-200px);
+            }
+            40% {
+                transform: translateX(calc((100vw - 240px) * -0.4)) translateY(-220px);
+            }
+            45% {
+                transform: translateX(calc((100vw - 240px) * -0.45)) translateY(-230px);
+            }
+            50% {
+                transform: translateX(calc((100vw - 240px) * -0.5)) translateY(-240px);
+            }
+            55% {
+                transform: translateX(calc((100vw - 240px) * -0.55)) translateY(-230px);
+            }
+            60% {
+                transform: translateX(calc((100vw - 240px) * -0.6)) translateY(-220px);
+            }
+            65% {
+                transform: translateX(calc((100vw - 240px) * -0.65)) translateY(-200px);
+            }
+            70% {
+                transform: translateX(calc((100vw - 240px) * -0.7)) translateY(-180px);
+            }
+            75% {
+                transform: translateX(calc((100vw - 240px) * -0.75)) translateY(-155px);
+            }
+            80% {
+                transform: translateX(calc((100vw - 240px) * -0.8)) translateY(-130px);
+            }
+            85% {
+                transform: translateX(calc((100vw - 240px) * -0.85)) translateY(-95px);
+            }
+            90% {
+                transform: translateX(calc((100vw - 240px) * -0.9)) translateY(-70px);
+            }
+            95% {
+                transform: translateX(calc((100vw - 240px) * -0.95)) translateY(-35px);
+            }
+            100% {
+                transform: translateX(calc((100vw - 240px) * -1)) translateY(0);
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Promocje</a></li>
-                <li><a href="#">Nowości</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="products">
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-        <div class="product">
-            <img src="socks.jpg" alt="Skarpetki Zygzaka McQueena">
-            <h3>Skarpetki Zygzaka McQueena - Produkt</h3>
-            <p>29.99 PLN</p>
-            <button>Dodaj do koszyka</button>
-        </div>
-    </section>
+    <div class="pad left"></div>
+    <div class="pad right"></div>
+    <div class="heli">🚁</div>
 </body>
 </html>
